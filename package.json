@@ -1,7 +1,7 @@
 {
-  "name": "@appfolio/react-native-payments",
-  "version": "0.9.1",
-  "description": "Welcome to the best and most comprehensive library for integrating payments like Apple Pay and Google Pay into your React Native app.",
+  "name": "@chromapdx/react-native-payments",
+  "version": "0.9.2",
+  "description": "Light weight Apple Pay and Google Pay into your React Native app-clip.",
   "scripts": {
     "run:packager": "cd examples/native && yarn run:packager",
     "run:ios": "cd examples/native && yarn run:ios",
@@ -39,9 +39,9 @@
   "author": "Naoufal Kadhom & Freeman Industries",
   "license": "MIT",
   "dependencies": {
-    "es6-error": "^4.0.2",
-    "uuid": "^3.1.0",
-    "validator": "^9.4.1"
+    "es6-error": "^4.1",
+    "uuid": "^8.3",
+    "validator": "^13.7"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
@@ -57,8 +57,8 @@
     "react-test-renderer": "16.0.0-alpha.12"
   },
   "peerDependencies": {
-    "react": ">=15",
-    "react-native": ">=0.60"
+    "react": ">=16",
+    "react-native": ">=0.61"
   },
   "jest": {
     "testPathIgnorePatterns": [

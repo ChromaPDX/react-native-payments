@@ -15,5 +15,5 @@ Pod::Spec.new do |s|
   s.requires_arc     = true
 
   s.dependency 'React'
-  s.dependency 'Stripe', '~> 21.8.1'
+  s.dependency 'StripeApplePay', '~> 22'
 end
