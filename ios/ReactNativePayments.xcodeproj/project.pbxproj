@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		770B1FE620C48E72009115EF /* PKPaymentButtonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 770B1FE220C48E71009115EF /* PKPaymentButtonManager.m */; };
-		770B1FE720C48E72009115EF /* PKPaymentButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 770B1FE420C48E72009115EF /* PKPaymentButtonView.m */; };
-		ADB95AAF1F199853007C2365 /* GatewayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB95AAE1F199853007C2365 /* GatewayManager.m */; };
-		B3E7B58A1CC2AC0600A0062D /* ReactNativePayments.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* ReactNativePayments.m */; };
+		2963E245284FF2F6001959BF /* PaymentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2963E244284FF2F6001959BF /* PaymentController.m */; };
+		2999F767284FD90400C738BF /* GatewayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2999F766284FD90400C738BF /* GatewayManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,14 +25,13 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libReactNativePayments.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libReactNativePayments.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		770B1FE220C48E71009115EF /* PKPaymentButtonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKPaymentButtonManager.m; sourceTree = "<group>"; };
-		770B1FE320C48E71009115EF /* PKPaymentButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKPaymentButtonView.h; sourceTree = "<group>"; };
-		770B1FE420C48E72009115EF /* PKPaymentButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKPaymentButtonView.m; sourceTree = "<group>"; };
-		770B1FE520C48E72009115EF /* PKPaymentButtonManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKPaymentButtonManager.h; sourceTree = "<group>"; };
-		ADB95AAD1F199853007C2365 /* GatewayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GatewayManager.h; sourceTree = "<group>"; };
-		ADB95AAE1F199853007C2365 /* GatewayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GatewayManager.m; sourceTree = "<group>"; };
-		B3E7B5881CC2AC0600A0062D /* ReactNativePayments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactNativePayments.h; sourceTree = "<group>"; };
-		B3E7B5891CC2AC0600A0062D /* ReactNativePayments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactNativePayments.m; sourceTree = "<group>"; };
+		2963E243284FF2F6001959BF /* PaymentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentController.h; sourceTree = "<group>"; };
+		2963E244284FF2F6001959BF /* PaymentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentController.m; sourceTree = "<group>"; };
+		2999F765284FD90400C738BF /* ReactNativePayments-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReactNativePayments-Bridging-Header.h"; sourceTree = "<group>"; };
+		2999F766284FD90400C738BF /* GatewayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayManager.swift; sourceTree = "<group>"; };
+		2999F76A284FDCEF00C738BF /* PKPaymentButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKPaymentButtonView.swift; sourceTree = "<group>"; };
+		2999F76C284FE67900C738BF /* PKPaymentButtonManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKPaymentButtonManager.h; sourceTree = "<group>"; };
+		2999F76D284FE67900C738BF /* PKPaymentButtonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKPaymentButtonManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,24 +56,15 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				770B1FE820C4A644009115EF /* Views */,
-				ADB95AAD1F199853007C2365 /* GatewayManager.h */,
-				ADB95AAE1F199853007C2365 /* GatewayManager.m */,
-				B3E7B5881CC2AC0600A0062D /* ReactNativePayments.h */,
-				B3E7B5891CC2AC0600A0062D /* ReactNativePayments.m */,
+				2999F76C284FE67900C738BF /* PKPaymentButtonManager.h */,
+				2963E243284FF2F6001959BF /* PaymentController.h */,
+				2963E244284FF2F6001959BF /* PaymentController.m */,
+				2999F76D284FE67900C738BF /* PKPaymentButtonManager.m */,
+				2999F76A284FDCEF00C738BF /* PKPaymentButtonView.swift */,
+				2999F766284FD90400C738BF /* GatewayManager.swift */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				2999F765284FD90400C738BF /* ReactNativePayments-Bridging-Header.h */,
 			);
-			sourceTree = "<group>";
-		};
-		770B1FE820C4A644009115EF /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				770B1FE520C48E72009115EF /* PKPaymentButtonManager.h */,
-				770B1FE220C48E71009115EF /* PKPaymentButtonManager.m */,
-				770B1FE320C48E71009115EF /* PKPaymentButtonView.h */,
-				770B1FE420C48E72009115EF /* PKPaymentButtonView.m */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +98,7 @@
 				TargetAttributes = {
 					58B511DA1A9E6C8500147676 = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 1340;
 					};
 				};
 			};
@@ -118,6 +107,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
@@ -135,10 +125,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				770B1FE720C48E72009115EF /* PKPaymentButtonView.m in Sources */,
-				770B1FE620C48E72009115EF /* PKPaymentButtonManager.m in Sources */,
-				ADB95AAF1F199853007C2365 /* GatewayManager.m in Sources */,
-				B3E7B58A1CC2AC0600A0062D /* ReactNativePayments.m in Sources */,
+				2963E245284FF2F6001959BF /* PaymentController.m in Sources */,
+				2999F767284FD90400C738BF /* GatewayManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +151,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -178,7 +167,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -203,6 +192,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -212,7 +202,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -222,34 +212,45 @@
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
-					"$(SRCROOT)/../../../../ios/**"
+					"$(SRCROOT)/../../../../ios/**",
 				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = ReactNativePayments;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ReactNativePayments-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
-					"$(SRCROOT)/../../../../ios/**"
+					"$(SRCROOT)/../../../../ios/**",
 				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = ReactNativePayments;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ReactNativePayments-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

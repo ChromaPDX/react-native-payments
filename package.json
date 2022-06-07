@@ -36,7 +36,7 @@
     "payment intents",
     "cross platform"
   ],
-  "author": "Naoufal Kadhom & Freeman Industries",
+  "author": "Leif @ Chroma with credit to: Naoufal Kadhom & Freeman Industries",
   "license": "MIT",
   "dependencies": {
     "es6-error": "^4.1",
