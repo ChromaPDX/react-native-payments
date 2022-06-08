@@ -125,7 +125,7 @@ export function useApplePay({
       setLoading(true);
       setItems(params.cartItems);
       const result = await _presentApplePay(params);
-      console.log("presentApplePay result", result);
+      // console.log("presentApplePay result", result);
       if (result.error) {
         setItems(null);
       }
