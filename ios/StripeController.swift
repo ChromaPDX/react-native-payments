@@ -3,14 +3,6 @@ import StripeApplePay
 
 @objc(StripeApplePay)
 class StripeApplePay: RCTEventEmitter, ApplePayContextDelegate, UIAdaptivePresentationControllerDelegate {
-    func applePayContext(_ context: STPApplePayContext, didCreatePaymentMethod paymentMethod: StripeAPI.PaymentMethod, paymentInformation: PKPayment, completion: @escaping STPIntentClientSecretCompletionBlock) {
-        
-    }
-    
-    func applePayContext(_ context: STPApplePayContext, didCompleteWith status: STPApplePayContext.PaymentStatus, error: Error?) {
-    }
-    
-    
     var merchantIdentifier: String? = nil
     var urlScheme: String? = nil
     
@@ -123,6 +115,45 @@ class StripeApplePay: RCTEventEmitter, ApplePayContextDelegate, UIAdaptivePresen
         sendEvent(withName: "onDidSetShippingContact", body: ["shippingContact": contact])
     }
     
+    func applePayContext(_ context: STPApplePayContext, didCreatePaymentMethod paymentMethod: StripeAPI.PaymentMethod, paymentInformation: PKPayment, completion: @escaping STPIntentClientSecretCompletionBlock) {
+        self.applePayCompletionCallback = completion
+        let dictionary = Mappers.mapFromPaymentMethod(paymentMethod)
+        self.applePayRequestResolver?(Mappers.createResult("paymentMethod", dictionary))
+        self.applePayRequestRejecter = nil
+    }
+    
+    func applePayContext(_ context: STPApplePayContext, didCompleteWith status: STPApplePayContext.PaymentStatus, error: Error?) {
+        //        sendEvent(withName: "didComplete", body: ["status":  status, "error": error])
+        switch status {
+        case .success:
+            applePayCompletionRejecter = nil
+            applePayRequestRejecter = nil
+            confirmApplePayPaymentResolver?([])
+            break
+        case .error:
+            let message = "Payment not completed"
+            applePayCompletionRejecter?(ErrorType.Failed, message, nil)
+            applePayRequestRejecter?(ErrorType.Failed, message, nil)
+            applePayCompletionRejecter = nil
+            applePayRequestRejecter = nil
+            break
+        case .userCancellation:
+            let message = "The payment has been canceled"
+            applePayCompletionRejecter?(ErrorType.Canceled, message, nil)
+            applePayRequestRejecter?(ErrorType.Canceled, message, nil)
+            applePayCompletionRejecter = nil
+            applePayRequestRejecter = nil
+            break
+        @unknown default:
+            let message = "Payment not completed"
+            applePayCompletionRejecter?(ErrorType.Unknown, message, nil)
+            applePayRequestRejecter?(ErrorType.Unknown, message, nil)
+            applePayCompletionRejecter = nil
+            applePayRequestRejecter = nil
+        }
+    }
+    
+    
     @objc(confirmApplePayPayment:resolver:rejecter:)
     func confirmApplePayPayment(clientSecret: String, resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: @escaping RCTPromiseRejectBlock) {
         self.applePayCompletionRejecter = reject
@@ -214,15 +245,13 @@ class StripeApplePay: RCTEventEmitter, ApplePayContextDelegate, UIAdaptivePresen
         }
         
         paymentRequest.paymentSummaryItems = paymentSummaryItems
-        
-        // TODO present apple pay
-        //        if let applePayContext = STPApplePayContext(paymentRequest: paymentRequest, delegate: self) {
-        //            DispatchQueue.main.async {
-        //                presentApplePay(completion: nil)
-        //            }
-        //        } else {
-        //            reject(ErrorType.Failed, "Payment not completed", nil)
-        //        }
+        if let applePayContext = STPApplePayContext(paymentRequest: paymentRequest, delegate: self) {
+            DispatchQueue.main.async {
+                applePayContext.presentApplePay(completion: nil)
+            }
+        } else {
+            reject(ErrorType.Failed, "Payment not completed", nil)
+        }
     }
     
     func configure3dSecure(_ params: NSDictionary) {
