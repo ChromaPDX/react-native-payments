@@ -2,19 +2,18 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@chromapdx/react-native-payments": [
-        "./src/index"
-      ]
+      "@chromapdx/react-native-payments": ["./src/index"]
     },
+    "declaration": true,
+    "rootDir": "./src",
+    "outDir": "./js/",
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "esModuleInterop": true,
-    "importsNotUsedAsValues": "error",
     "forceConsistentCasingInFileNames": true,
+    "importsNotUsedAsValues": "remove",
     "jsx": "react",
-    "lib": [
-      "ES6"
-    ],
+    "lib": ["ES6"],
     "module": "commonjs",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
@@ -27,8 +26,6 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext",
-    "types": [
-      "node",
-    ]
+    "types": ["node"]
   }
 }

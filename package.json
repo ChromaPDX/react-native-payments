@@ -2,6 +2,8 @@
   "name": "@chromapdx/react-native-payments",
   "version": "0.9.2",
   "description": "Light weight Apple Pay and Google Pay into your React Native app-clip.",
+  "author": "Leif @ Chroma. Based directly on @stripe/stripe-react-native with additional credit to: Naoufal Kadhom & Freeman Industries",
+  "private": true,
   "scripts": {
     "run:packager": "cd examples/native && yarn run:packager",
     "run:ios": "cd examples/native && yarn run:ios",
@@ -11,10 +13,10 @@
     "lint:fix": "npm run lint -- --fix",
     "test": "jest"
   },
-  "homepage": "https://github.com/appfolio/react-native-payments",
+  "homepage": "https://github.com/chromapdx/react-native-payments",
   "repository": {
     "type": "git",
-    "url": "https://github.com/appfolio/react-native-payments.git"
+    "url": "https://github.com/chromapdx/react-native-payments.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
@@ -36,7 +38,6 @@
     "payment intents",
     "cross platform"
   ],
-  "author": "Leif @ Chroma with credit to: Naoufal Kadhom & Freeman Industries",
   "license": "MIT",
   "dependencies": {
     "es6-error": "^4.1",
@@ -53,5 +54,6 @@
       "/examples/"
     ]
   },
-  "main": "js/index.js"
+  "main": "js/index.js",
+  "types": "js/index.d.ts"
 }
