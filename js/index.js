@@ -1,12 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.useStripe = exports.useApplePay = exports.StripeProvider = exports.GooglePayButton = exports.ApplePayButton = void 0;
+exports.useStripe = exports.useApplePay = exports.useGooglePay = exports.StripeProvider = exports.GooglePayButton = exports.ApplePayButton = void 0;
 var ApplePayButton_1 = require("./components/ApplePayButton");
 Object.defineProperty(exports, "ApplePayButton", { enumerable: true, get: function () { return ApplePayButton_1.ApplePayButton; } });
 var GooglePayButton_1 = require("./components/GooglePayButton");
 Object.defineProperty(exports, "GooglePayButton", { enumerable: true, get: function () { return GooglePayButton_1.GooglePayButton; } });
 var StripeProvider_1 = require("./components/StripeProvider");
 Object.defineProperty(exports, "StripeProvider", { enumerable: true, get: function () { return StripeProvider_1.StripeProvider; } });
+var useGooglePay_1 = require("./hooks/useGooglePay");
+Object.defineProperty(exports, "useGooglePay", { enumerable: true, get: function () { return useGooglePay_1.useGooglePay; } });
 var useApplePay_1 = require("./hooks/useApplePay");
 Object.defineProperty(exports, "useApplePay", { enumerable: true, get: function () { return useApplePay_1.useApplePay; } });
 var useStripe_1 = require("./hooks/useStripe");
